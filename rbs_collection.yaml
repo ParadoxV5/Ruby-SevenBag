@@ -9,3 +9,5 @@ sources:
 gems:
 - name: rbs
   ignore: true
+- name: rspec
+  ignore: true

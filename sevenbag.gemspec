@@ -19,4 +19,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   
   spec.add_development_dependency 'rbs', '~> 2.6.0'
+  spec.add_development_dependency 'rspec', '~> 3.11.0'
 end
