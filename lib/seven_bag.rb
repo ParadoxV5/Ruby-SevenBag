@@ -9,7 +9,7 @@ class SevenBag
     # The next Tetromino is the **last** element of the Array.
     # Removing the last element is O(1) whereas it’s O(n) for the first.
     # This design optimizes for both shuffling and single-end de-queuing
-    @bag = Array.new(7)
+    @bag = []
   end
   def bag
     @bag.reverse

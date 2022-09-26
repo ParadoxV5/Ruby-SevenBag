@@ -20,5 +20,5 @@ jobs:
         ruby-version: '2'
         bundler-cache: true
     
-    - name: Package Gem
+    - name: Test with RSpec
       run: bundle exec rspec
