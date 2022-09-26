@@ -1,5 +1,8 @@
 name: GitHub Packages
-on: {release: {types: [published]}}
+on:
+  push:
+    branches: [main]
+    paths: [lib/**, spec/**]
 jobs:
   package:
     runs-on: ubuntu-latest
@@ -14,11 +17,9 @@ jobs:
       with:
         ruby-version: '2'
         bundler-cache: true
-      env:
-        BUNDLE_RUBYGEMS__PKG__GITHUB__COM: Bearer:${{ github.token }}
     
     - name: Package Gem
-      run: bundle exec gem build --output mygem.gem mygem.gemspec
+      run: bundle exec rspec
     
     - name: Publish to GitHub Packages
       run: bundle exec gem push --host https://rubygems.pkg.github.com/ParadoxV5 mygem.gem
