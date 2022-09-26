@@ -16,10 +16,11 @@ RSpec.describe 'SevenBag' do
     
   it '#get consistently use the Random it was #initialize-d with' do
     2.times do
-      seven_bag = SevenBag.new(Random::DEFAULT)
-      seed = Random::DEFAULT.seed
+      random = Random.new
+      seed = random.seed
+      seven_bag = SevenBag.new(random)
       run1 = 7.times.map { seven_bag.get }
-      Random.srand(seed)
+      seven_bag = SevenBag.new(Random.new(seed))
       run2 = 7.times.map { seven_bag.get }
       expect(run2).to eql(run1)
     end

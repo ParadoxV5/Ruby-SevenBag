@@ -18,7 +18,7 @@ class SevenBag
   def get
     if @bag.empty?
       TETROMINO_SET.each {|t| @bag << t}
-      @bag.shuffle!(random: random)
+      @bag.shuffle!(random: @random)
     end
     @bag.pop
   end
