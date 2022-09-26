@@ -20,7 +20,3 @@ jobs:
     
     - name: Package Gem
       run: bundle exec rspec
-    
-    - name: Publish to GitHub Packages
-      run: bundle exec gem push --host https://rubygems.pkg.github.com/ParadoxV5 mygem.gem
-      env: {GEM_HOST_API_KEY: "Bearer ${{ github.token }}"}
