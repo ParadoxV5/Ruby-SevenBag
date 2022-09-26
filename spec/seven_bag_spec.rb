@@ -10,7 +10,7 @@ RSpec.describe 'SevenBag' do
     2.times do
       seven_bag = SevenBag.new
       test_set = Set.new(7.times.map { seven_bag.get })
-      expect(test_set).to eql(SevenBag::SET)
+      expect(test_set).to eql(SevenBag::TETROMINO_SET)
     end
   end
     
