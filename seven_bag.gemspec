@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |spec|
   spec.name = 'SevenBag'
-  spec.summary = ''
-  spec.version = '1.0-SNAPSHOT'
+  spec.summary = 'The Ruby rewrite of my small Java program SevenBag'
+  spec.version = '1.0'
   spec.required_ruby_version = '>= 2'
   
   spec.author = 'ParadoxV5'
