@@ -18,7 +18,7 @@ RSpec.describe 'SevenBag' do
     2.times do  
       random = Random.new
       seed = random.seed
-      seven_bag = SevenBag.new(seed)
+      seven_bag = SevenBag.new(random)
       run1 = 7.times.map { seven_bag.get }
       random.srand(seed)
       run2 = 7.times.map { seven_bag.get }

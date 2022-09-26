@@ -1,2 +1,11 @@
 class SevenBag
+  TETROMINO_SET: Set[Symbol]
+  
+  def initialize: (?Random random) -> void
+  @random: Random
+  @bag: Array[Symbol]
+  def bag: () -> Array[Symbol]
+  
+  def get: () -> Symbol
+  alias call get
 end

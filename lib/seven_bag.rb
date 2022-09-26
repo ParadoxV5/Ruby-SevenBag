@@ -16,11 +16,11 @@ class SevenBag
   end
   
   def get
-    if bag.empty?
+    if @bag.empty?
       TETROMINO_SET.each {|t| @bag << t}
       @bag.shuffle!(random: random)
     end
-    bag.pop
+    @bag.pop
   end
   # alias get to `obj.()`, syntax sugar for `obj.call`
   alias call get
