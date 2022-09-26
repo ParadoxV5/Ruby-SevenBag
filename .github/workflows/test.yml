@@ -1,10 +1,10 @@
-name: GitHub Packages
+name: Test with RSpec
 on:
   push:
     branches: [main]
     paths: [lib/**, spec/**]
 jobs:
-  package:
+  test:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
