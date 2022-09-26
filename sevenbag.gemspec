@@ -18,9 +18,10 @@ Gem::Specification.new do |spec|
   spec.files = Dir['**/*']
   spec.require_paths = ['lib']
   
-  # Ruby 2.? autoloads the Standard Library Gem `set` upon use and
-  # Ruby 3.2 includes it directly as a built-in class (no more `require`)
-  #spec.add_dependency 'set', '~1.0.0'
+  # Ruby autoloads the Standard Library Gem `set` upon use;
+  # Ruby 3.2 is expecting to include it directly as a built-in class
+  # (no more `require`, though assuming gem-like uses are kept compatible)
+  spec.add_dependency 'set', '~> 1.0.0'
   
   spec.add_development_dependency 'rbs', '~> 2.6.0'
   spec.add_development_dependency 'rspec', '~> 3.11.0'

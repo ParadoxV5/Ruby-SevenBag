@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+require 'set'
 
-module SevenBag
+class SevenBag
 end

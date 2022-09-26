@@ -1,2 +1,2 @@
-module SevenBag
+class SevenBag
 end
